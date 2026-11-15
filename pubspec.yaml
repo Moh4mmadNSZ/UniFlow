@@ -22,3 +22,12 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  # Vazirmatn font (SIL Open Font License, see assets/fonts/OFL.txt)
+  fonts:
+    - family: Vazirmatn
+      fonts:
+        - asset: assets/fonts/Vazirmatn-Regular.ttf
+        - asset: assets/fonts/Vazirmatn-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Vazirmatn-Bold.ttf
+          weight: 700

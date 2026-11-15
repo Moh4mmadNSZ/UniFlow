@@ -1,0 +1,24 @@
+name: uniflow
+description: "UniFlow - Student Registration and Management System"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.14.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Official Material library of Flutter 3.50 (MaterialApp, Scaffold, ...)
+  material_ui: ^1.11.0
+  # Finds the right folder for the data file on each operating system
+  path_provider: ^2.1.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

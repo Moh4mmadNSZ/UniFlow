@@ -165,16 +165,20 @@ class _StudentListScreenState extends State<StudentListScreen> {
                 child: DropdownButtonFormField<String?>(
                   initialValue: selectedMajor,
                   isDense: true,
+                  isExpanded: true,
                   decoration: const InputDecoration(labelText: 'رشته'),
                   items: [
                     const DropdownMenuItem<String?>(
                       value: null,
-                      child: Text('همه رشته‌ها'),
+                      child: Text(
+                        'همه رشته‌ها',
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
                     for (final major in majors)
                       DropdownMenuItem<String?>(
                         value: major,
-                        child: Text(major),
+                        child: Text(major, overflow: TextOverflow.ellipsis),
                       ),
                   ],
                   onChanged: (value) => setState(() => _majorFilter = value),
@@ -185,12 +189,16 @@ class _StudentListScreenState extends State<StudentListScreen> {
                 child: DropdownButtonFormField<SortOption>(
                   initialValue: _sortBy,
                   isDense: true,
+                  isExpanded: true,
                   decoration: const InputDecoration(labelText: 'مرتب‌سازی'),
                   items: [
                     for (final option in SortOption.values)
                       DropdownMenuItem(
                         value: option,
-                        child: Text(sortLabel(option)),
+                        child: Text(
+                          sortLabel(option),
+                          overflow: TextOverflow.ellipsis,
+                        ),
                       ),
                   ],
                   onChanged: (value) {

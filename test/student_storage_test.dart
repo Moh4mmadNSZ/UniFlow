@@ -74,8 +74,7 @@ void main() {
         .where((entity) => entity.path.contains('.broken-'))
         .toList();
     expect(backups.length, 1);
-    expect(await File(backups.first.path).readAsString(),
-        '[ { "studentId": ');
+    expect(await File(backups.first.path).readAsString(), '[ { "studentId": ');
   });
 
   test('wrong data types are treated as a damaged file', () async {

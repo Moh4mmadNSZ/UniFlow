@@ -88,8 +88,8 @@ void main() {
 
   test('the major must belong to the faculty', () {
     expect(validateFacultyAndMajor('Engineering', 'Physics'), isNotNull);
-    expect(validateFacultyAndMajor('Engineering', 'Computer Engineering'),
-        isNull);
+    expect(
+        validateFacultyAndMajor('Engineering', 'Computer Engineering'), isNull);
   });
 
   test('validateStudent finds every wrong field', () {
